@@ -5,6 +5,7 @@ import { newsFetchById } from "../Redux/Slices/newsSlices";
 import { useEffect } from "react";
 import './style.css'
 import './page.css'
+import { Helmet } from "react-helmet";
 
 function NewsPage(){
 
