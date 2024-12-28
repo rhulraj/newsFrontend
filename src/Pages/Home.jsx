@@ -54,12 +54,12 @@ function Home(){
           <Helmet>
             <title>Vedic facts</title>
             <meta property="og:title" content="Vedic Fact" />
-            <meta property="og:description" content=""/>
+            <meta property="og:description" content="vedic Kshatriya"/>
             <meta property="og:image" content={logo}/>
             <meta property="og:url" content=""/>
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="My Awesome Page" />
-            <meta name="twitter:description" content="This is an amazing page that does awesome things." />
+            <meta name="twitter:title" content="vedic History" />
+            <meta name="twitter:description" content="" />
             <meta name="twitter:image" content={logo} />
          </Helmet>
             <h1 className=" text-center m-4">Vedic Facts</h1>
@@ -81,7 +81,7 @@ function Home(){
              </div>
           </div>
 
-          <div>
+        <div>
             <h1 className=" text-center mb-8">Latest News</h1>
 
            <div className="relative " onClick={()=>{handleNewsFetchId(latest[0]?._id)}}>

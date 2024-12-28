@@ -3,8 +3,9 @@ import './footer.css'
 import facebookImg from '../assets/facebook.png'
 import instgramImg from '../assets/instagram.png'
 import twitterImg from '../assets/twitter.png'
+import { Link } from 'react-router-dom'
 
-function Footer(){
+function Footer(){s
     return(
         <>
            <div className='bg-zinc-500  py-4 flex justify-around'>
@@ -26,11 +27,12 @@ function Footer(){
                     <img src="" alt=""  />
                 </ul>
                 <ul className='text-center '>
-                    <li>Home</li>
-                    <li>Vedic Fact</li>
-                    <li>Latest News</li>
-                    <li>Top News</li>
-                    <li>International News</li>
+                   <Link to={'/'}><li>Home</li></Link> 
+                   <Link><li>Vedic Fact</li></Link>
+                    <Link><li>Latest News</li></Link>
+                    <Link><li>Top News</li></Link>
+                    <Link><li>International News</li></Link>
+                    
                 </ul>
                </div>
            </div>

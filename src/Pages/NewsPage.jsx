@@ -27,22 +27,23 @@ function NewsPage(){
         <Layout>
             <div className="container text-black mx-10 mt-10 ">
             <Helmet>
-            <title>Vedic facts</title>
-            <meta property="og:title" content="Vedic Fact" />
-            <meta property="og:description" content=""/>
+            <title>{data.title}</title>
+            <meta property="og:title" content={data.title} />
+            <meta property="og:description" content={data.body1}/>
             <meta property="og:image" content={data.image1}/>
             <meta property="og:url" content=""/>
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="My Awesome Page" />
-            <meta name="twitter:description" content="This is an amazing page that does awesome things." />
+            <meta name="twitter:card" content="" />
+            <meta name="twitter:title" content={data.title} />
+            <meta name="twitter:description" content={data.body1} />
             <meta name="twitter:image" content={data.image1} />
          </Helmet>
                {data.title && <h1 className="page">{data.title}</h1> }
                 {data.image1 && <img src={data.image1} alt="" className="mx-auto my-6" />}
                 <p className="page">{data.body1}</p>
                 {data.image2 && <img src={data.image2} alt="" className="mx-auto my-6" />}
-                {data.image3 && <img src={data.image3} alt="" className="mx-auto my-6"/>}
                 <p className="page">{data.body2}</p>
+                {data.image3 && <img src={data.image3} alt="" className="mx-auto my-6"/>}
+                <p className="page">{data.body3}</p>
                 
             </div>
         </Layout>
