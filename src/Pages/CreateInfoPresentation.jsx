@@ -1,5 +1,6 @@
 import Layout from "../Layout/Layouts";
 import './style.css'
+import './page.css'
 
 function CreateInfoPresentation({handleFormSubmit,handleUserInput,handleUserIamge}){
 

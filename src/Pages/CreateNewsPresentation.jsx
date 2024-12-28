@@ -1,5 +1,6 @@
 import Layout from "../Layout/Layouts";
 import './style.css'
+import './page.css'
 
 function CreateNewsPresentation({handleFormSubmit,handleUserInput,handleUserIamge}){
 
