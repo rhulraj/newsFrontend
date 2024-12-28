@@ -12,7 +12,7 @@ import SignUp from './Pages/Auth/SignUp';
 import VerifyOtp from './Pages/Auth/VerifyOtp';
 import Login from './Pages/Auth/Login';
 import CreatePage from './Pages/CreatePage';
-import InfoPage from './Pages/infoPage';
+import InfoPage from './Pages/InfoPage';
 import NewsPage from './Pages/NewsPage';
 
 
