@@ -8,7 +8,7 @@ import CreateNews from './Pages/CreateNews';
 import LatestNews from './Pages/Latest.News';
 import TopNews from './Pages/TopNews';
 import InternationalNews from './Pages/International';
-import SignUp from './Pages/auth/SignUp';
+import SignUp from './Pages/Auth/SignUp';
 import VerifyOtp from './Pages/Auth/VerifyOtp';
 import Login from './Pages/Auth/Login';
 import CreatePage from './Pages/CreatePage';
