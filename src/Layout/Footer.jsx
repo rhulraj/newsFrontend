@@ -5,7 +5,7 @@ import instgramImg from '../assets/instagram.png'
 import twitterImg from '../assets/twitter.png'
 import { Link } from 'react-router-dom'
 
-function Footer(){s
+function Footer(){
     return(
         <>
            <div className='bg-zinc-500  py-4 flex justify-around'>
