@@ -22,16 +22,12 @@ export const sendOtp = createAsyncThunk('/user/sendOtp', async(data)=>{
 })
 
 export const verifyOtp = createAsyncThunk('/users/verifyOtp', async(data)=>{
-    const response = axiosInstanse.post('users/verify', data, {
-        headers :{
-            'Content-Type' : 'multipart/form-data' //important for file upload
-        }
-    })
+    const response = axiosInstanse.post('users/verify', data)
     toast.promise(response, {
         success: (resolvePromise)=>{
             return resolvePromise?.data?.message
         },
-        loading : "hold back tight, opt verification is in process",
+        loading : "hold back tight, otp verification is in process",
         error: "Oh no! something went wrong. please try again"
     })
 

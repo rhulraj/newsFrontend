@@ -8,9 +8,13 @@ import CreateNews from './Pages/CreateNews';
 import LatestNews from './Pages/Latest.News';
 import TopNews from './Pages/TopNews';
 import InternationalNews from './Pages/International';
-import SignUpPresentaion from './Pages/Auth/SignUpPresentation';
 import SignUp from './Pages/auth/SignUp';
 import VerifyOtp from './Pages/Auth/VerifyOtp';
+import Login from './Pages/Auth/Login';
+import CreatePage from './Pages/CreatePage';
+import InfoPage from './Pages/infoPage';
+import NewsPage from './Pages/NewsPage';
+
 
 function App() {
 
@@ -25,7 +29,12 @@ function App() {
       <Route path='/news/international' element = {<InternationalNews/>} />
       <Route path='/user/createAccount' element ={<SignUp/>} />
       <Route path='/user/verifyOtp' element = {<VerifyOtp/>} />
+      <Route path='/createPost' element = {<CreatePage/>} />
+      <Route path='/auth/login' element = {<Login />} />
+      <Route path='/infos/:id' element= {<InfoPage/>} />
+      <Route path='/news/:id' element={<NewsPage/>} />
     </Routes>
+     
     
   )
 }

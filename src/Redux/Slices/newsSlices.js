@@ -80,9 +80,9 @@ export const deleteById = createAsyncThunk('infos/delte/:id', async(id)=>{
     
 });
 
-export const newsFetchById = createAsyncThunk('/infos/:id', async(id)=>{
+export const newsFetchById = createAsyncThunk('/news/:id', async(id)=>{
     try{
-    const response = axiosInstanse.get(`/infos/${id}`)
+    const response = axiosInstanse.get(`/news/${id}`)
     
     const apiResponse = await response
     return apiResponse

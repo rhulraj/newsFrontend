@@ -49,12 +49,12 @@ function SignUpPresentaion({handleUserInput,handleFormSubmit}){
                             className="w-full px-3 py-1 mt-2 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out border border-gray-300 rounded outline-noe focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200" required/>
                           </div>
                           <div>
-                            <label htmlFor="password" className="text-sm leading-7 ">Password<span className="text-red-500">*</span></label>
+                            <label htmlFor="plainPassword" className="text-sm leading-7 ">Password<span className="text-red-500">*</span></label>
                             
                             <input
                             type="password" 
-                            id="password" 
-                            name="password"
+                            id="plainPassword" 
+                            name="plainPassword"
                             onChange={handleUserInput}
                             minLength={3} 
                             placeholder="password"

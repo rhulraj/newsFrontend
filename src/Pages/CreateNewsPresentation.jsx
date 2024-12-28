@@ -1,13 +1,14 @@
 import Layout from "../Layout/Layouts";
+import './style.css'
 
 function CreateNewsPresentation({handleFormSubmit,handleUserInput,handleUserIamge}){
 
     return(
 
         <Layout>
-             <div className= "w-5/6 m-auto mt-32 lg:mt-40">
+             <div className= "container w-5/6 m-auto mt-32 lg:mt-40 ">
                 <h1 className="text-lg text-center  font-meduim title-font mb-5 " >Add news</h1>
-                <form className="mb-10" action="">
+                <form className="mb-10 px-10" action="">
                         <div className="  ">
                             <label htmlFor="title" className="text-sm leading-7 ">Title<span className="text-red-500">*</span></label>
                             

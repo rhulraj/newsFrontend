@@ -1,0 +1,25 @@
+li{
+    margin-top: 5px;
+}
+li:hover{
+    color: rgb(10, 10, 7);
+    text-decoration-line: underline;
+    text-underline-offset: 10px;
+}
+@media (max-width: 768px) {
+    
+    h1{
+        font-size: large;
+        font-weight: 600;
+    }
+    li{
+        font-size: 14px;
+    }
+    .img{
+        width:30px
+    }
+    p{
+        font-size: 14px;
+    }
+   
+}

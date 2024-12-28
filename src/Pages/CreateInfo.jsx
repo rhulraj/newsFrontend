@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import CreateInfoPresentation from "./CreateInfoPresentation";
 import { createInfo } from "../Redux/Slices/inforSlices";
 import { useState } from "react";
@@ -13,6 +13,7 @@ function CreateInfo(){
     })
     const [selectedfiles, setFiles] = useState([]);
     const dispatch = useDispatch();
+    const isLogged = useSelector(state => state.auth.isLoggedIn)
 
     function handleUserImage(e){
         const {name, files} =e.target
@@ -33,7 +34,10 @@ function CreateInfo(){
 
     async function handleFormSubmit(e){
         e.preventDefault();
-
+        if(!isLogged){
+            toast.error("you are not eligible to create posts")
+            return
+        }
         if(!info.title || !info.body1 || !info.body2){
             toast.error("Please fill All input")
             return

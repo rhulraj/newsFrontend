@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "../Layout/Layouts";
 import CreateNewsPresentation from "./CreateNewsPresentation";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import { createNews } from "../Redux/Slices/newsSlices";
 
@@ -14,7 +14,8 @@ function CreateNews(){
      })
      const [selectedfiles, setFiles] = useState([]);
      const dispatch = useDispatch();
- 
+     const isLogged = useSelector(state => state.auth.isLoggedIn)
+
      function handleUserImage(e){
          const {name, files} =e.target
          setFiles([
@@ -34,7 +35,10 @@ function CreateNews(){
  
      async function handleFormSubmit(e){
          e.preventDefault();
-         console.log(news)
+         if(!isLogged){
+            toast.error("you are not eligible to create posts")
+            return
+        }
  
          if(!news.title || !news.body1 || !news.body2 ){
              toast.error("Please fill All input")

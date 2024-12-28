@@ -1,11 +1,12 @@
 import Layout from "../Layout/Layouts";
+import './style.css'
 
 function CreateInfoPresentation({handleFormSubmit,handleUserInput,handleUserIamge}){
 
     return(
 
         <Layout>
-             <div className="w-5/6 m-auto mt-32 lg:mt-40">
+             <div className="container w-5/6 m-auto mt-32 lg:mt-40">
                 <h1 className="text-lg text-center md-5 font-meduim title-font mb-6 " >Create New Information</h1>
                 <form action="">
                         <div className="  ">

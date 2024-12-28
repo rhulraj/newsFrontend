@@ -8,8 +8,10 @@ function VerifyOtp(){
      
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const userData = useSelector(state => state.user)
+    const userData = useSelector(state => state.user.data)
+    
     const [data, setData] = useState({
+        email : userData.email,
         otp :''
     }) 
 
@@ -23,22 +25,18 @@ function VerifyOtp(){
 
     async function handleFormSubmit(e){
         e.preventDefault();
-        setData({
-            ...data,
-            email : userData.data.email
-        })
         if(!data.otp){
             toast.error("please enter Otp")
         }
+        console.log(data)
         const response = await dispatch(verifyOtp(data));
         console.log(response)
 
         if(response.payload?.data?.success){
             
-            const apiResponse = await dispatch(createAccount(userData.data));
-           // await dispatch(removeDetails())
-            console.log(apiResponse)
-            //navigate('/auth/login')
+            const apiResponse = await dispatch(createAccount(userData));
+           await dispatch(removeDetails())
+            navigate('/auth/login')
         }
 
     }
