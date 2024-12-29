@@ -5,6 +5,7 @@ import './style.css'
 import logo from '../assets/logo.svg'
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { newsFetchById } from "../Redux/Slices/newsSlices";
 
 function LatestNews(){
 
@@ -20,7 +21,9 @@ function LatestNews(){
      const data = news.latest.slice(initial, end);
 
      async function handleNewsFetchId(id){
+           await dispatch(newsFetchById(id))
            navigate(`/news/${id}`)
+           
         }
 
      function next(){
@@ -40,8 +43,8 @@ function LatestNews(){
             <title>Vedic facts</title>
             <meta property="og:title" content="Vedic Fact" />
             <meta property="og:description" content=""/>
-            <meta property="og:image" content={logo}/>
-            <meta property="og:url" content=""/>
+            <meta property="og:image" content="https://res.cloudinary.com/dyufylq1y/image/upload/v1733236123/hnmvcj2pz25uzrqaobnb.jpg"/>
+            <meta property="og:url" content="https://vedicinfos.in/news/latest"/>
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="My Awesome Page" />
             <meta name="twitter:description" content="This is an amazing page that does awesome things." />

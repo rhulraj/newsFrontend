@@ -14,6 +14,7 @@ import Login from './Pages/Auth/Login';
 import CreatePage from './Pages/CreatePage';
 import InfoPage from './Pages/InfoPage';
 import NewsPage from './Pages/NewsPage';
+import { Helmet } from 'react-helmet';
 
 
 function App() {

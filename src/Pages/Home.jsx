@@ -56,7 +56,7 @@ function Home(){
             <meta property="og:title" content="Vedic Fact" />
             <meta property="og:description" content="vedic Kshatriya"/>
             <meta property="og:image" content={logo}/>
-            <meta property="og:url" content=""/>
+            <meta property="og:url" content="https://vedicinfos.in"/>
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="vedic History" />
             <meta name="twitter:description" content="" />
@@ -68,7 +68,7 @@ function Home(){
                {info.map(element => {
                   return(
                  
-               <div onClick= { ()=>{handleFetchId(element._id)}} className="relative " key={element._id}>
+               <div onClick= { ()=>{handleFetchId(element._id)}} className="relative" key={element._id}>
                      <img src={element.image1} alt="" className="w-96 m-auto " />
                      <h2 className="absolute bottom-3 text-white lg:left-60">{element.title}</h2>
                   </div>

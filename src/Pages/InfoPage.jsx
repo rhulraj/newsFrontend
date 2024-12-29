@@ -28,7 +28,7 @@ function InfoPage() {
             <meta property="og:title" content={data.title} />
             <meta property="og:description" content={data.body1}/>
             <meta property="og:image" content={data.image1}/>
-            <meta property="og:url" content=""/>
+            <meta property="og:url" content={`https://vedicinfos.in/infos/${data._id}`}/>
             <meta name="twitter:card" content="" />
             <meta name="twitter:title" content={data.title} />
             <meta name="twitter:description" content={data.body1} />

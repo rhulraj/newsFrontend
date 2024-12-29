@@ -41,7 +41,7 @@ function InternationalNews(){
             <meta property="og:title" content="Vedic Fact" />
             <meta property="og:description" content=""/>
             <meta property="og:image" content={logo}/>
-            <meta property="og:url" content=""/>
+            <meta property="og:url" content="https://vedicinfos.in/news/international"/>
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="My Awesome Page" />
             <meta name="twitter:description" content="This is an amazing page that does awesome things." />
