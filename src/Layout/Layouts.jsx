@@ -24,13 +24,10 @@ function Layout({children}){
     async function logOut (){
       const response = await dispatch(logOUt())
     }
-    const interval = ssetTimeout(()=>{
-      console.log("hello")
-    },10000)
+    
     async function fetchInfo(){
       dispatch({type: 'LOADING_START'})
       try{
-        await interval
         const info = await dispatch(fetchAllInfo());
         const latest = await dispatch(fetchLatestNews())
         const top = await dispatch(fetchTopNews());

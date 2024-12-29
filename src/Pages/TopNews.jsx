@@ -5,13 +5,14 @@ import './style.css'
 import logo from '../assets/logo.svg'
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { newsFetchById } from "../Redux/Slices/newsSlices";
 
 function TopNews(){
 
 
     
     const [initial, setIntial] = useState(0);
-    const [end, setEnd] = useState(2);
+    const [end, setEnd] = useState(20);
     const [page, setPage] = useState(1);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -20,17 +21,18 @@ function TopNews(){
      const data = news.top.slice(initial, end);
 
      async function handleNewsFetchId(id){
+      await dispatch(newsFetchById(id))
            navigate(`/news/${id}`)
         }
 
      function next(){
-        setEnd( end + 2 );
-        setIntial( initial + 2 );
+        setEnd( end + 20 );
+        setIntial( initial + 20 );
         setPage(page + 1)
      }
      function previous(){
-        setEnd( end - 2 );
-        setIntial( initial - 2 );
+        setEnd( end - 20 );
+        setIntial( initial - 20 );
         setPage(page - 1)
      }
 
